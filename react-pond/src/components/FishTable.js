@@ -7,9 +7,9 @@ var FishTable = (props) => (
 
   <table>
     <tbody>
-      <FishTableRow fishes={fishData[0]}/>
-      <FishTableRow fishes={fishData[1]}/>
-      <FishTableRow fishes={fishData[2]}/>
+      <FishTableRow fishes={fishes[0]}/>
+      <FishTableRow fishes={fishes[1]}/>
+      <FishTableRow fishes={fishes[2]}/>
     </tbody>
   </table>
 );
