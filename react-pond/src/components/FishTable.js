@@ -2,17 +2,21 @@
 // We have them here to illustrate the implicit import of the related code.
 // Please leave these lines commented out.
 // import FishTableRow from './FishTableRow.js';
-
-var FishTable = (props) => (
+var FishTable = (props) => { 
+  var items = [];
+  props.fishes.forEach(fish => items.push(<FishTableRow fish={fish}/>))
+  return (
 
   <table>
     <tbody>
-      <FishTableRow fishes={fishes[0]}/>
-      <FishTableRow fishes={fishes[1]}/>
-      <FishTableRow fishes={fishes[2]}/>
+      {items}
+      {/* <FishTableRow fishes={props.fishes[0]}/>
+      <FishTableRow fishes={props.fishes[1]}/>
+      <FishTableRow fishes={props.fishes[2]}/> */}
     </tbody>
   </table>
 );
+    }
 
 // PropTypes tell other developers what `props` a component expects
 // Warnings will be shown in the console when the defined rules are violated
